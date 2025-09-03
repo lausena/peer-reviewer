@@ -1,0 +1,193 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{parskip}
+
+% Configure hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+}
+
+% Configure page headers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Peer Review: {{ paper_title_short }}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Configure section titles
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{black}}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{black}}{\thesubsection}{1em}{}
+
+% Custom environments
+\usepackage{tcolorbox}
+\tcbuselibrary{most}
+
+\newtcolorbox{summarybox}{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    title=Summary
+}
+
+\newtcolorbox{strengthsbox}{
+    colback=green!5!white,
+    colframe=green!75!black,
+    title=Strengths
+}
+
+\newtcolorbox{weaknessesbox}{
+    colback=red!5!white,
+    colframe=red!75!black,
+    title=Weaknesses \& Areas for Improvement
+}
+
+\newtcolorbox{recommendationbox}{
+    colback=orange!5!white,
+    colframe=orange!75!black,
+    title=Recommendation
+}
+
+\begin{document}
+
+% Title page
+\title{\textbf{Peer Review Report}\\
+\large {{ paper_title }}}
+\author{AI Peer Reviewer\\
+\small Generated using {{ model_name }}\\
+\small Review Date: {{ review_date }}}
+\date{}
+\maketitle
+
+\thispagestyle{empty}
+\newpage
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Main content
+\section{Paper Information}
+
+\begin{table}[h]
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Field} & \textbf{Details} \\
+\midrule
+Title & {{ paper_title }} \\
+Review Type & {{ review_type }} \\
+Review Date & {{ review_date }} \\
+Model Used & {{ model_name }} \\
+Reasoning Level & {{ reasoning_level }} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Executive Summary}
+
+\begin{summarybox}
+{{ summary }}
+\end{summarybox}
+
+\section{Detailed Assessment}
+
+\subsection{Strengths}
+
+\begin{strengthsbox}
+{{ strengths }}
+\end{strengthsbox}
+
+\subsection{Weaknesses and Areas for Improvement}
+
+\begin{weaknessesbox}
+{{ weaknesses }}
+\end{weaknessesbox}
+
+\section{Technical Quality Assessment}
+
+{{ technical_quality }}
+
+\section{Novelty and Significance}
+
+{{ novelty_significance }}
+
+\section{Clarity and Presentation}
+
+{{ clarity_presentation }}
+
+\section{Specific Comments and Suggestions}
+
+{{ specific_comments }}
+
+\section{Minor Issues}
+
+{% if minor_issues %}
+{{ minor_issues }}
+{% else %}
+No significant minor issues were identified.
+{% endif %}
+
+\section{Overall Recommendation}
+
+\begin{recommendationbox}
+{{ recommendation }}
+\end{recommendationbox}
+
+\section{Reviewer's Reasoning Process}
+
+{% if reasoning %}
+\subsection{AI Model Reasoning}
+The following section contains the detailed reasoning process used by the AI model during the review:
+
+\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!black,title=Model Reasoning]
+{{ reasoning }}
+\end{tcolorbox}
+{% endif %}
+
+\section{Metadata and Technical Information}
+
+\subsection{Document Processing Information}
+\begin{itemize}
+    \item \textbf{Extraction Method:} {{ extraction_method }}
+    \item \textbf{Word Count:} {{ word_count }} words
+    \item \textbf{Page Count:} {{ page_count }} pages
+    \item \textbf{Processing Date:} {{ processing_date }}
+\end{itemize}
+
+\subsection{Model Configuration}
+\begin{itemize}
+    \item \textbf{Model:} {{ model_name }}
+    \item \textbf{Temperature:} {{ temperature }}
+    \item \textbf{Max Tokens:} {{ max_tokens }}
+    \item \textbf{Reasoning Level:} {{ reasoning_level }}
+\end{itemize}
+
+\vfill
+
+\hrule
+\vspace{0.5cm}
+\begin{center}
+\footnotesize
+This peer review was generated using AI technology and should be considered as supplementary to human expert review. \\
+The assessment is based on the model's training data and may not reflect the latest developments in the field. \\
+\textbf{Generated on {{ review_date }} using {{ model_name }}}
+\end{center}
+
+\end{document}

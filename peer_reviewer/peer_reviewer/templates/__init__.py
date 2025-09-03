@@ -1,0 +1,1 @@
+"""LaTeX templates for peer review generation."""

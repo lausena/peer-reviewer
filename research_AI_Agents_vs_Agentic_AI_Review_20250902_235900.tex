@@ -1,0 +1,250 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+% Page setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\textit{Peer Review - AI Agents vs. Agentic AI}}
+\fancyfoot[C]{\thepage}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{blue!70!black}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+% Line spacing
+\onehalfspacing
+
+\begin{document}
+
+\title{\textbf{Peer Review: AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges}}
+\author{\textbf{Academic Reviewer}}
+\date{\today}
+\maketitle
+
+\begin{abstract}
+This peer review provides a comprehensive evaluation of the paper "AI Agents vs. Agentic AI: A Conceptual Taxonomy, Applications and Challenges" by Sapkota et al. The review assesses the paper's contributions, methodology, technical rigor, clarity, and significance to the field. While the paper addresses an important and timely topic in AI research, several areas require significant improvement before publication in a top-tier venue.
+\end{abstract}
+
+\section{Summary}
+
+The paper presents a comprehensive survey distinguishing between AI Agents and Agentic AI systems. The authors propose a structured taxonomy that characterizes AI Agents as modular, task-specific systems driven by Large Language Models (LLMs) and Large Image Models (LIMs), while positioning Agentic AI as more sophisticated multi-agent collaborative systems with enhanced autonomy, persistent memory, and orchestrated workflows.
+
+The work progresses through seven main sections: (1) foundational understanding of AI Agents, (2) the role of LLMs as reasoning engines, (3) emergence of Agentic AI, (4) architectural evolution, (5) application domains, (6) challenges and limitations, and (7) potential solutions and future roadmap. The authors employ a hybrid literature search methodology across 12 platforms and provide extensive comparative analysis through multiple taxonomic tables.
+
+\section{Strengths}
+
+\subsection{Comprehensive Scope and Timeliness}
+The paper addresses a highly relevant and rapidly evolving area of AI research. The distinction between AI Agents and Agentic AI is indeed important for the field, as these terms are often used interchangeably despite representing different paradigms. The comprehensive scope, covering foundational concepts through future directions, provides valuable breadth.
+
+\subsection{Systematic Methodology}
+The hybrid literature search across 12 platforms (academic databases and AI-powered interfaces) demonstrates thoroughness. The systematic progression from basic concepts to complex multi-agent systems follows a logical structure that aids reader comprehension.
+
+\subsection{Rich Comparative Analysis}
+The paper provides extensive comparative taxonomies (Tables I-IX) that systematically differentiate the paradigms across multiple dimensions including architecture, mechanisms, scope, interaction styles, and autonomy levels. These tables serve as valuable reference materials for researchers.
+
+\subsection{Practical Applications Focus}
+The detailed application examples (Figure 10-11) effectively illustrate real-world implementations, bridging theoretical concepts with practical deployments. The coverage spans diverse domains from customer service to agricultural robotics.
+
+\subsection{Forward-Looking Perspective}
+The solutions framework (Figure 13) and future roadmap (Figure 14) provide actionable insights for addressing current limitations and advancing the field.
+
+\section{Weaknesses}
+
+\subsection{Conceptual Clarity and Definitions}
+\textbf{Major Concern}: The fundamental distinction between AI Agents and Agentic AI lacks precision and consistency throughout the paper. The definitions provided are somewhat circular and overlapping:
+
+\begin{itemize}
+\item The paper defines AI Agents as "autonomous software entities engineered for goal-directed task execution" but later describes Agentic AI as having "higher autonomy."
+\item The distinction between "narrow, well-defined tasks" (AI Agents) and "complex, multi-step tasks" (Agentic AI) is not sufficiently clear, as complexity exists on a spectrum.
+\item The paper sometimes treats these as evolutionary stages and other times as fundamentally different paradigms.
+\end{itemize}
+
+\textbf{Recommendation}: Establish clearer, non-overlapping definitions with specific operational criteria that can be objectively applied to classify systems.
+
+\subsection{Methodological Limitations}
+
+\textbf{Search Strategy Bias}: The inclusion of AI-powered search interfaces (ChatGPT, Perplexity, etc.) alongside traditional academic databases introduces potential bias and reliability concerns. These tools may surface non-peer-reviewed content or exhibit temporal biases toward recent developments.
+
+\textbf{Selection Criteria}: The paper lacks explicit inclusion/exclusion criteria for the literature review. Terms like "novelty," "empirical evaluation," and "citation impact" are mentioned but not operationalized.
+
+\textbf{Systematic Review Standards}: The methodology does not follow established systematic review protocols (e.g., PRISMA guidelines), limiting reproducibility and rigor.
+
+\subsection{Technical Depth and Rigor}
+
+\textbf{Limited Technical Analysis}: While the paper provides broad coverage, it lacks deep technical analysis of the underlying architectures, algorithms, and implementation details that truly differentiate these paradigms.
+
+\textbf{Evaluation Frameworks}: The paper does not propose or discuss evaluation metrics and benchmarks for assessing AI Agents versus Agentic AI systems, which would be valuable for empirical validation of the proposed taxonomy.
+
+\textbf{Theoretical Grounding}: The work would benefit from stronger theoretical foundations in multi-agent systems theory, distributed AI, and cognitive architectures.
+
+\subsection{Empirical Evidence}
+
+\textbf{Lack of Quantitative Analysis}: The review is primarily qualitative, lacking quantitative analysis of performance differences, capabilities, or limitations between the two paradigms.
+
+\textbf{Case Study Limitations}: While application examples are provided, they lack sufficient depth and do not include performance comparisons or empirical validation of the claimed advantages of each paradigm.
+
+\subsection{Literature Coverage and Analysis}
+
+\textbf{Imbalanced Coverage}: The paper heavily emphasizes recent developments (2022-2025) while potentially underrepresenting foundational work in multi-agent systems and distributed AI that predates the LLM era.
+
+\textbf{Critical Analysis**: The review is largely descriptive rather than critically analytical. There is limited evaluation of conflicting viewpoints or theoretical debates in the field.
+
+\section{Technical Assessment}
+
+\subsection{Architectural Framework}
+The architectural evolution framework (Figure 8) provides a reasonable conceptual progression, but lacks technical specificity about the underlying computational mechanisms that enable this evolution. The paper would benefit from:
+
+\begin{itemize}
+\item Detailed analysis of communication protocols in multi-agent systems
+\item Formal models of coordination mechanisms
+\item Computational complexity analysis of different orchestration strategies
+\end{itemize}
+
+\subsection{Taxonomy Validity}
+The extensive comparative tables represent significant effort, but their validity is questionable due to:
+
+\begin{itemize}
+\item Overlapping categories that create ambiguity
+\item Lack of empirical validation of the proposed distinctions
+\item Absence of inter-rater reliability measures for categorization
+\end{itemize}
+
+\subsection{Challenge Analysis}
+The challenges section (Section V) provides comprehensive coverage of limitations, but lacks:
+
+\begin{itemize}
+\item Prioritization of challenges by severity or research urgency
+\item Quantitative assessment of the impact of different limitations
+\item Discussion of fundamental versus solvable limitations
+\end{itemize}
+
+\section{Clarity and Presentation}
+
+\subsection{Organization and Structure}
+The paper is generally well-organized with clear section progression. The visual aids (figures and tables) effectively support the textual content, though some figures could benefit from higher resolution and clearer labeling.
+
+\subsection{Writing Quality}
+The writing is generally clear and academic in tone. However, some sections suffer from:
+
+\begin{itemize}
+\item Excessive use of jargon without adequate explanation
+\item Repetitive content across sections
+\item Inconsistent terminology usage
+\item Some grammatical errors and awkward phrasing
+\end{itemize}
+
+\subsection{Technical Communication}
+The paper effectively communicates complex concepts to a broad audience, though it sometimes sacrifices precision for accessibility.
+
+\section{Significance and Impact}
+
+\subsection{Contribution to Field}
+The paper addresses an important gap in the literature by providing a structured framework for understanding the evolution from AI Agents to Agentic AI. This taxonomy could serve as a foundation for future research and development efforts.
+
+\subsection{Practical Relevance}
+The application-focused approach and solution roadmap provide practical value for researchers and practitioners working in the field.
+
+\subsection{Limitations in Impact}
+The impact is limited by:
+
+\begin{itemize}
+\item Lack of empirical validation of the proposed taxonomy
+\item Absence of novel theoretical insights
+\item Limited actionable guidance for system designers
+\end{itemize}
+
+\section{Specific Comments}
+
+\subsection{Introduction (Section I)}
+\begin{itemize}
+\item The Google Trends data (Figure 1) is interesting but needs more rigorous interpretation
+\item The historical context could be more concise
+\item Consider adding a clear problem statement and research questions
+\end{itemize}
+
+\subsection{Methodology (Section II)}
+\begin{itemize}
+\item Page 4, Figure 3: The methodology pipeline needs clearer explanation of decision criteria at each stage
+\item The 12-platform search strategy needs justification for including non-academic sources
+\end{itemize}
+
+\subsection{Foundational Understanding (Section II)}
+\begin{itemize}
+\item Page 5, Table I: Consider adding quantitative criteria to distinguish between paradigms
+\item The three core characteristics (autonomy, task-specificity, reactivity) need more precise operational definitions
+\end{itemize}
+
+\subsection{Applications (Section IV)}
+\begin{itemize}
+\item The application examples are well-chosen but lack comparative performance analysis
+\item Consider adding failure cases and limitations of each application domain
+\end{itemize}
+
+\subsection{Challenges (Section V)}
+\begin{itemize}
+\item Page 20, Figure 12: The challenge categorization could be more systematic
+\item Consider adding urgency/priority rankings for different challenges
+\end{itemize}
+
+\subsection{Solutions (Section VI)}
+\begin{itemize}
+\item Page 25, Figure 13: The solutions need more detailed technical specifications
+\item Consider providing implementation guidelines or frameworks
+\end{itemize}
+
+\section{Minor Issues}
+
+\begin{itemize}
+\item Reference formatting inconsistencies throughout
+\item Some figures have low resolution (particularly Figure 1)
+\item Table captions could be more descriptive
+\item Abbreviation list would be helpful given the extensive use of acronyms
+\item Page numbering issues in the reference to "Author, Year" placeholders
+\end{itemize}
+
+\section{Recommendation}
+
+\textbf{Major Revision Required}
+
+While this paper addresses an important and timely topic, significant improvements are needed before it meets the standards for publication in a top-tier venue. The fundamental conceptual distinctions need clarification, the methodology requires strengthening, and the analysis needs greater depth and rigor.
+
+\subsection{Essential Revisions}
+
+\begin{enumerate}
+\item \textbf{Conceptual Framework}: Establish clearer, operationally distinct definitions for AI Agents and Agentic AI with specific criteria for classification
+\item \textbf{Methodology}: Strengthen the systematic review methodology with explicit inclusion/exclusion criteria and bias mitigation strategies
+\item \textbf{Technical Depth}: Add more technical analysis of architectural differences, evaluation frameworks, and performance comparisons
+\item \textbf{Empirical Validation}: Include quantitative analysis or case studies that empirically validate the proposed taxonomy
+\item \textbf{Critical Analysis}: Provide more critical evaluation of existing work and theoretical debates in the field
+\end{enumerate}
+
+\subsection{Suggested Improvements}
+
+\begin{enumerate}
+\item Develop formal models or frameworks for each paradigm
+\item Create evaluation benchmarks for assessing systems within the taxonomy
+\item Include failure analysis and comparative performance studies
+\item Strengthen the theoretical foundations with references to established multi-agent systems theory
+\item Provide more actionable guidance for system designers and researchers
+\end{enumerate}
+
+\section{Conclusion}
+
+This paper tackles an important and relevant topic in the rapidly evolving field of AI systems. The comprehensive scope and structured approach represent significant effort and provide value to the research community. However, the work requires substantial revision to address fundamental conceptual clarity issues, strengthen the methodological rigor, and provide deeper technical analysis.
+
+The authors have created a useful foundation that, with proper revision addressing the identified concerns, could make a meaningful contribution to the field. The topic is sufficiently important and the initial work sufficiently comprehensive that the effort to make these revisions would be worthwhile.
+
+The paper would benefit from collaboration with experts in multi-agent systems theory and distributed AI to strengthen the theoretical foundations and ensure the proposed taxonomy aligns with established principles in these fields.
+
+\textbf{Final Assessment}: The paper shows promise but requires major revision before it can be considered for publication in a top-tier venue. With appropriate revisions addressing the conceptual, methodological, and technical concerns raised, this could become a valuable reference work for the AI research community.
+
+\end{document}
